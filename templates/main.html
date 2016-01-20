@@ -18,6 +18,8 @@ from branding import api as branding_api
       <meta http-equiv="X-UA-Compatible" content="IE=edge">
       <meta name="Main from Theme-TEMPLATES">
       <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+      ## Add jquery from start to avoid overwritting require's version
+      <script type="text/javascript" src="${static.url('themes/{theme_name}/js/jquery.js'.format(theme_name=settings.THEME_NAME))}"></script>
       <style>
  
       </style>
