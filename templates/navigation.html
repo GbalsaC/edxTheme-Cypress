@@ -69,7 +69,6 @@ $(function() {
             url: profileUrl.replace('${PLACEHOLDER_USERNAME}', username2),
             success: function(response) {
                 var imageUrl = response["profile_image"]["image_url_medium"];
-                imageUrl = imageUrl.replace("media", "static");
                 console.log('Image Url response: ', imageUrl);
             }
         });
@@ -81,7 +80,7 @@ $(function() {
             url: profileUrl.replace('${PLACEHOLDER_USERNAME}', username2),
             success: function(response) {
                 var imageUrl = response["profile_image"]["image_url_medium"];
-                imageUrl = imageUrl.replace("media", "static");
+                
                 console.log('Image Url response: ', imageUrl);
                 $('#imageMain').attr("src", imageUrl);
             }
@@ -138,18 +137,18 @@ $(document).ready(function () {
         <ul id="menuD-wrapper" class="dropdown-menu menuD" aria-labelledby="menuD">
             <li>
                 <a href="/" >
-                <img src="/static/images/edx-theme/dashboard-icon-blue.svg" width="35" height="35">My Dashboard
+                <img src="/static/themes/edx-theme/images/dashboard-icon-blue.svg" width="35" height="35">My Dashboard
                 </a>
             </li> 
             <li>
                 <a href="${marketing_link('COURSES')}">
-                <img src="/static/images/edx-theme/search-courses-blue-icon.svg" width="35" height="35">Search Activities
+                <img src="/static/themes/edx-theme/images/search-courses-blue-icon.svg" width="35" height="35">Search Activities
                 </a>
             </li> 
             % if GlobalStaff().has_user(user):
             <li>
                 <a href="${justIp(("{cms_base}").format(cms_base=settings.CMS_BASE))}:18010/home">
-                <img src="/static/images/edx-theme/designer-icon-blue.svg" width="35" height="35">${_("Activity Designer").format(platform_name=settings.PLATFORM_NAME)}
+                <img src="/static/themes/edx-theme/images/designer-icon-blue.svg" width="35" height="35">${_("Activity Designer").format(platform_name=settings.PLATFORM_NAME)}
                 </a>
             </li>      
             % endif                    
@@ -169,17 +168,17 @@ $(document).ready(function () {
           <ul id="profileD-wrapper" class="dropdown-menu menuD" aria-labelledby="menuD">
             <li>
               <a href="${reverse('account_settings')}">
-                <img src="/static/images/edx-theme/settings-blue-icon.svg" width="35" height="35"> ${_("Settings")}
+                <img src="/static/themes/edx-theme/images/settings-blue-icon.svg" width="35" height="35"> ${_("Settings")}
               </a>
             </li> 
             <li>
               <a href="${reverse('learner_profile', kwargs={'username': user.username})}">
-                <img src="/static/images/edx-theme/my-profile-blue-icon.svg" width="35" height="35"> ${_("My Profile")}
+                <img src="/static/themes/edx-theme/images/my-profile-blue-icon.svg" width="35" height="35"> ${_("My Profile")}
               </a>
             </li> 
             <li>
               <a href="${reverse('logout')}" role="menuitem">
-                <img src="/static/images/edx-theme/logout-blue-icon.svg" width="35"   height="35"> ${_("Logout")}
+                <img src="/static/themes/edx-theme/images/logout-blue-icon.svg" width="35"   height="35"> ${_("Logout")}
               </a>
             </li>                          
           </ul>
