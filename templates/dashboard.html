@@ -251,7 +251,7 @@ from django.core.urlresolvers import reverse
 
 <div id="wrapper" class="container-fluid">
 
-  <div class="col-sm-12">
+  <div class="col-sm-12" style="margin-bottom:15px;">
     <div class="filter-wrapper padding-30">
         <div class="row">
           <ul class="list-inline col-sm-7 padding-5 ">
@@ -285,7 +285,7 @@ from django.core.urlresolvers import reverse
 
 
   <div class="row">
-      <div class="col-md-12 margin-top">
+      <div class="margin-top" style="margin-top:30px;">
             % if len(course_enrollment_pairs) > 0:
               <ul class="list-inline" id="courseList">
               <% share_settings = settings.FEATURES.get('SOCIAL_SHARING_SETTINGS', {}) %>
