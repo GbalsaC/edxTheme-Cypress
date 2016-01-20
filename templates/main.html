@@ -76,6 +76,8 @@ from branding import api as branding_api
     ## Keep for future Removal of SCSS Stylesheets which have caused assets compile error
      <%static:css group='style-vendor'/>
      <%static:css group='style-main'/>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" rel="stylesheet">
     <link rel="stylesheet" href="${static.url('themes/{theme_name}/css/bundle.css'.format(theme_name=settings.THEME_NAME))}" />
     <link rel="stylesheet" href="${static.url('themes/{theme_name}/css/mCustomScrollbar.css'.format(theme_name=settings.THEME_NAME))}" />
     <link rel="stylesheet" href="${static.url('themes/{theme_name}/css/main.css'.format(theme_name=settings.THEME_NAME))}" />
@@ -149,8 +151,7 @@ from branding import api as branding_api
   % if style_overrides_file:
     <link rel="stylesheet" type="text/css" href="${static.url(style_overrides_file)}" />
   % endif
-  <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet">
-  <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" rel="stylesheet">
+  
 
   <script type="text/javascript" name="jqueryGeneral">
         function deepCopy(obj) {
