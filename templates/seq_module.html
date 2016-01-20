@@ -161,6 +161,8 @@
     console.log('Document Ready');
     titleKeep = [];
     sequenceNav = new SequenceNav($('.sequence-nav'));
+    /*
+    //Muted due to error on rendering
     $(".lessons-wrapper").mCustomScrollbar({
     scrollInertia:500
      });
@@ -168,7 +170,7 @@
     console.log('Set Timeout Called');
     $(".lessons-wrapper").mCustomScrollbar("scrollTo",'div#current-circle');
     },800);
-
+  */
     $('ol#sequence-list li').each(function(index){
       //Remove Span Children
       $(this).find('p').children().remove();
