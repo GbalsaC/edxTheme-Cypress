@@ -8,7 +8,15 @@
   body.view-passwordreset header#mainMenu{
     display: none;
   }
+  ul.menuD {
+    top: 66px;
+    border: none;
+    border-radius: 0px;
+  }
 
+  .menuD li {
+      padding-bottom: 7px;
+  }
 
   form#pwd_reset_form {
       margin-bottom: 30px !important;
