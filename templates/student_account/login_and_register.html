@@ -58,7 +58,7 @@
             //console.log('document Ready on Login and Register');
            
             $('#login-and-registration-container').toggle(200);
-            $('#login-and-registration-container').prepend('<div class="logo-wrapper text-center"><img src="static/themes/edx-theme/images/logo.png" width="125" height="55"></div>');
+           
             $('button.login-button').prepend('<img src="static/themes/edx-theme/images/login-icon.png" width="20" height="20">   ');
             //console.log('New content is:', $('#login-and-registration-container').html().length);
             
@@ -112,8 +112,27 @@
     };
 </script>
 <style>
+    .toggle-form {
+    width: 328px !important;
+    padding-right: 82px !important;
+    padding-left: 45px !important;
+    }
+    #loginScreen{
+    z-index:100;
+    }
+    form .logo-wrapper.text-center {
+    display: none;
+    }
+    .section-bkg-wrapper{
+        background-color: transparent;
+    }
     div.section-title.lines{
         /*display:none*/;
+    }
+    div#login-and-registration-container {
+    width: 400px;
+    margin-bottom: 50px;
+    padding-bottom: 50px;
     }
     div#login-form form#login, form#register, form#password-reset {
     border: none;
